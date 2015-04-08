@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <script>
+  if ('serviceWorker' in navigator) {
+    // Registering two SWs.
+    navigator.serviceWorker.register('sw-foo.js', {scope: '/foo'})
+    .then(function (registration) {
+      console.log('ServiceWorker-foo registration successful with scope: ', registration.scope);
+    }).catch(function (err) {
+      console.error('ServiceWorker-foo registration failed: ', err);
+    });
+
+    navigator.serviceWorker.register('sw-bar.js', {scope: '/bar'})
+    .then(function (registration) {
+      console.log('ServiceWorker-bar registration successful with scope: ', registration.scope);
+    }).catch(function (err) {
+      console.error('ServiceWorker-bar registration failed: ', err);
+    });
+  }
+  </script>
+</head>
+<body>
+  <div>
+    <p><a href="/foo">Go to /foo.</a></p>
+    <p><a href="/bar">Go to /bar.</a></p>
+  </div>
+</body>

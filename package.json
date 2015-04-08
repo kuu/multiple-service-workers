@@ -1,0 +1,20 @@
+{
+  "name": "registering-multiple-sw",
+  "version": "0.0.0",
+  "description": "To see if it's possible to register multiple service workers for different paths.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js www/sw-*.js",
+    "prestart": "npm run lint",
+    "start": "node index.js"
+  },
+  "author": "Kuu Miyazaki",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "private": true,
+  "devDependencies": {
+    "eslint": "^0.17.1"
+  }
+}
